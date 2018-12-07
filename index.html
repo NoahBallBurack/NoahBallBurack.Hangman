@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Noah Ball-Burack's Hangman</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body onload="populateLetters()">
+
+<div id="title">Hangman</div>
+<div id="byLine">By Noah Ball-Burack</div>
+
+<select id="category" class="w3-hover-opacity" onchange="startGame(this.value)">
+    <option selected disabled>Please select a category</option>
+    <option value="0">Music Artists</option>
+    <option value="1">Presidents</option>
+    <option value="2">Countries</option>
+    <option value="3">Movies</option>
+</select>
+
+<div id="categoryTitle"></div>
+
+<div id="congrats">CONGRATULATIONS! YOU LIVE TO SEE ANOTHER DAY...</div>
+
+<div id="dead">YOU'RE DEAD</div>
+
+<div id="guesses"></div>
+
+<div id="guessesBank"></div>
+
+<div id="printedWord"></div>
+
+<div id="letterRow"></div>
+
+<div id="image"></div>
+
+<button id="newCategory" onclick="window.location.reload()" class="w3-btn w3-lightgray w3-border w3-border-red w3-text-red w3-round-large">Choose a new category</button>
+<button id="newWord" onclick="newWord()" class="w3-btn w3-lightgray w3-border w3-border-red w3-text-red w3-round-large">Choose a new word</button>
+
+<div id="spacer"></div>
+
+</body>
+</html>
